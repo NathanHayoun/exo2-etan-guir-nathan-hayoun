@@ -20,6 +20,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {GestionComponent} from "./gestion/gestion.component";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     FooterComponent,
     AccueilComponent,
     ContactComponent,
-    ListeComponent
+    ListeComponent,
+    GestionComponent
   ],
   imports: [
     BrowserModule,

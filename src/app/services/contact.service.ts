@@ -1,10 +1,11 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {User} from "../models/User";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
+  userUpdate: EventEmitter<User> = new EventEmitter<User>();
   private user: User | undefined;
 
   constructor() {
@@ -12,7 +13,7 @@ export class ContactService {
 
   setUser(user: User) {
     this.user = user;
-
+    this.userUpdate.emit(user);
   }
 
   getUser() {

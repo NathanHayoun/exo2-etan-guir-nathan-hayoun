@@ -3,7 +3,7 @@
     <p>
       <mat-form-field appearance="fill">
         <mat-label>Prénom</mat-label>
-        <input formControlName="firstName" matInput placeholder="Placeholder">
+        <input formControlName="_firstName" matInput placeholder="Prénom">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>Hint</mat-hint>
       </mat-form-field>
@@ -11,7 +11,7 @@
     <p>
       <mat-form-field appearance="fill">
         <mat-label>Nom</mat-label>
-        <input [required] matInput placeholder="Placeholder">
+        <input formControlName="_lastName" matInput placeholder="Nom">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>Hint</mat-hint>
       </mat-form-field>
@@ -19,7 +19,7 @@
     <p>
       <mat-form-field appearance="fill">
         <mat-label>Age</mat-label>
-        <input [required] matInput placeholder="Placeholder">
+        <input formControlName="_age" matInput placeholder="Age">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-hint>Hint</mat-hint>
       </mat-form-field>
@@ -27,22 +27,21 @@
     <p>
       <mat-form-field *ngIf="mailCheck" appearance="fill">
         <mat-label>Email</mat-label>
-        <input [required] matInput placeholder="aa@gmail.com" type="email">
+        <input formControlName="_email" matInput placeholder="mail@domain.com" type="email">
         <mat-hint>Hint</mat-hint>
       </mat-form-field>
-      <mat-checkbox (click)="mailCheck = !mailCheck" [checked]=mailCheck class="example-margin"
+      <mat-checkbox (click)="disabledMail()" [checked]=mailCheck class="example-margin"
                     disabled="true"></mat-checkbox>
-
     </p>
     <p>
       <mat-form-field appearance="fill">
         <mat-label>Commentaire</mat-label>
-        <textarea [required] matInput></textarea>
+        <textarea formControlName="_commentaire" matInput></textarea>
       </mat-form-field>
     </p>
+    <button [disabled]="userForm.invalid" color="primary" mat-raised-button type="submit">Enregistrer</button>
   </form>
 </div>
 
-<button [disabled]="!formcontrol.form.valid" color="primary" mat-raised-button>Enregistrer</button>
 
 
