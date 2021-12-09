@@ -12,14 +12,17 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatIconModule} from "@angular/material/icon";
 import {MatListModule} from "@angular/material/list";
-import { AccueilComponent } from './accueil/accueil.component';
+import {AccueilComponent} from './accueil/accueil.component';
+import {ListeComponent} from './liste/liste.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AccueilComponent
+    AccueilComponent,
+    ListeComponent
   ],
   imports: [
     BrowserModule,
@@ -31,10 +34,7 @@ import { AccueilComponent } from './accueil/accueil.component';
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
-    BrowserAnimationsModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatToolbarModule
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
