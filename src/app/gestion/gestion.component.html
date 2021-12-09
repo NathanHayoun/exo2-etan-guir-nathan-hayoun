@@ -1,0 +1,11 @@
+<div *ngIf="lastContact">
+  {{ lastContact.firstName }}
+  {{ lastContact.lastName }}
+  {{ lastContact.email }}
+  {{lastContact.age}}
+  {{lastContact.commentaire}}
+</div>
+
+<div *ngIf="!lastContact">
+  ERREUR 404
+</div>
