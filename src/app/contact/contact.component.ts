@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {FormControl, formControlBinding, FormGroup} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormsModule, ReactiveFormsModule, FormGroup} from "@angular/forms";
+import {ContactService} from "../services/contact.service";
 
 @Component({
   selector: 'app-contact',
@@ -8,26 +9,32 @@ import {FormControl, formControlBinding, FormGroup} from "@angular/forms";
 })
 export class ContactComponent implements OnInit {
 
-  public mailCheck:boolean = true;
-  public profileForm:FormControl;
+  public mailCheck: boolean = true;
+
+  userForm: FormGroup | undefined;
 
 
-  // profileForm = new FormGroup({
-  //   firstName: new FormControl(''),
-  //   lastName: new FormControl(''),
-  //   age: new FormControl(''),
-  //   email: new FormControl(''),
-  //
-  // });
+  constructor(private sc: ContactService, private formBuilder: FormBuilder) {
 
-  constructor(profileForm: FormControl) {
-    this.profileForm = new FormControl()
+
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.initForm();
+  }
 
-  public setDonnee(){
 
+  initForm() {
+    this.userForm = this.formBuilder.group({
+      _firstName: '',
+      _lastName: '',
+      _age: '',
+      _commentaire: '',
+      _email: ''
+    });
+  }
+
+  public setDonnee() {
   }
 
 
