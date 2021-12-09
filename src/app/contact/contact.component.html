@@ -1,0 +1,48 @@
+<div class="fond">
+<!--  <form [formGroup]="profileForm">-->
+  <form #formcontrol = profileForm>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Prénom</mat-label>
+      <input matInput placeholder="Placeholder" [required]>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Nom</mat-label>
+      <input matInput placeholder="Placeholder" [required] >
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Age</mat-label>
+      <input matInput placeholder="Placeholder" [required]>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field *ngIf="mailCheck" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput placeholder="aa@gmail.com" [required]>
+      <mat-hint>Hint</mat-hint>
+    </mat-form-field>
+    <mat-checkbox (click)="mailCheck = !mailCheck" class="example-margin" [checked]= mailCheck disabled="true"></mat-checkbox>
+
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Commentaire</mat-label>
+      <textarea matInput [required]></textarea>
+    </mat-form-field>
+  </p>
+  </form>
+</div>
+
+<button mat-raised-button color="primary" [disabled]="!formcontrol.form.valid" >Enregistrer</button>
+
+
