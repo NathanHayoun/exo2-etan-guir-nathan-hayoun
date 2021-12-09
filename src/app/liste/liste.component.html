@@ -1,0 +1,9 @@
+<div>
+  <mat-card (click)="film.isExpand=!film.isExpand" *ngFor="let film of films" class="card-film">
+    <mat-card-header>
+      <mat-card-title>{{film.title}}</mat-card-title>
+    </mat-card-header>
+    <img *ngIf="film.isExpand" alt="Photo of a {{film.title}}" mat-card-image src="{{film.img}}">
+  </mat-card>
+</div>
+<div class="push"></div>

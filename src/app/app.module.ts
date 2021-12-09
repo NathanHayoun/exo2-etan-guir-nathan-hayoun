@@ -12,7 +12,9 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatIconModule} from "@angular/material/icon";
 import {MatListModule} from "@angular/material/list";
-import { AccueilComponent } from './accueil/accueil.component';
+import {AccueilComponent} from './accueil/accueil.component';
+import {ListeComponent} from './liste/liste.component';
+import {MatCardModule} from "@angular/material/card";
 import { ContactComponent } from './contact/contact.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
@@ -24,7 +26,8 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
     HeaderComponent,
     FooterComponent,
     AccueilComponent,
-    ContactComponent
+    ContactComponent,
+    ListeComponent
   ],
     imports: [
         BrowserModule,
@@ -42,8 +45,10 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
         MatToolbarModule,
         MatFormFieldModule,
         MatInputModule,
-        MatCheckboxModule
+        MatCheckboxModule,
+        MatCardModule
     ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
