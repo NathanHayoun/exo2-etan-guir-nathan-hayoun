@@ -12,14 +12,17 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
-import { AccueilComponent } from './accueil/accueil.component';
+import {AccueilComponent} from './accueil/accueil.component';
+import {ListeComponent} from './liste/liste.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AccueilComponent
+    AccueilComponent,
+    ListeComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { AccueilComponent } from './accueil/accueil.component';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
