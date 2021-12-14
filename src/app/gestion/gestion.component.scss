@@ -1,0 +1,45 @@
+.wraper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+  transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+
+}
+
+img {
+  max-width: 85%;
+}
+
+.fond {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70rem;
+  margin-bottom: 10rem;
+  box-shadow: 10px 5px 5px black;
+  background-color: #4D4444;
+  text-align: center;
+
+  //width: ;
+}
+
+//ul {
+//  display: block;
+//  //justify-content: normal;
+//  //white-space: normal;
+//}
+
+h1 {
+  font-weight: bold;
+  font-family: "harryPotter", sans-serif;
+}
+
+h2 {
+  background-color: rgba(147, 201, 255);
+  border-radius: 10px;
+  font-family: "harryPotter", sans-serif;
+}
+
+body {
+  color: red;
+}

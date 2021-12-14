@@ -29,7 +29,7 @@ export class ContactComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       _firstName: ['', Validators.required],
       _lastName: ['', Validators.required],
-      _age: ['', Validators.required],
+      _age: ['', Validators.compose([Validators.pattern("\\d+"), Validators.required])],
       _commentaire: ['', Validators.required],
       _email: ['', Validators.compose([Validators.email, Validators.required])]
     });

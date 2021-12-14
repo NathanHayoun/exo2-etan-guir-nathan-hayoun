@@ -1,8 +1,23 @@
-html, body {
-  background-color: gray;
+@font-face {
+  font-family: "harryPotter";
+  src: url("../assets/polices/HARRYP__.TTF");
+
+}
+
+html, body, {
+  background-image: url("../assets/images/fond.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: scroll;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
+
+* {
+  font-family: "harryPotter", sans-serif;
+}
+
+
