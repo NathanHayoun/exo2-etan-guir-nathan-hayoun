@@ -6,7 +6,7 @@ import {Film} from "../models/Film";
   templateUrl: './liste.component.html',
   styleUrls: ['./liste.component.scss']
 })
-export class ListeComponent implements OnInit {
+export class ListeComponent {
   public films: Array<Film>;
   private title = ["Harry Potter", "Sword Art Online", "Avengers", "Star Wars", "Passenger"];
   private images = ["harrypotter.jpg", "sao.jpg", "avengers.jpg", "starwars.jpg", "passenger.jpg"];
@@ -17,8 +17,4 @@ export class ListeComponent implements OnInit {
       this.films.push(new Film(this.title[i], this.images[i]));
     }
   }
-
-  ngOnInit(): void {
-  }
-
 }
