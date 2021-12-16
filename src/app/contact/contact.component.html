@@ -9,7 +9,6 @@
           <mat-label>Prénom</mat-label>
           <input formControlName="_firstName" matInput placeholder="Prénom">
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          <mat-hint>Hint</mat-hint>
         </mat-form-field>
       </p>
       <p>
@@ -17,7 +16,6 @@
           <mat-label>Nom</mat-label>
           <input formControlName="_lastName" matInput placeholder="Nom">
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          <mat-hint>Hint</mat-hint>
         </mat-form-field>
       </p>
       <p>
@@ -25,14 +23,12 @@
           <mat-label>Age</mat-label>
           <input formControlName="_age" matInput placeholder="Age" type="number">
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          <mat-hint>Hint</mat-hint>
         </mat-form-field>
       </p>
       <p>
         <mat-form-field *ngIf="mailCheck" appearance="fill">
           <mat-label>Email</mat-label>
           <input formControlName="_email" matInput placeholder="mail@domain.com" type="email">
-          <mat-hint>Hint</mat-hint>
         </mat-form-field>
         <mat-checkbox (click)="disabledMail()" [checked]=mailCheck class="example-margin"
                       disabled="true"></mat-checkbox>
