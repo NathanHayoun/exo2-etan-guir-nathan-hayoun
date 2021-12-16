@@ -48,7 +48,7 @@ export class ContactComponent implements OnInit {
       formValue['_email'] ? formValue['_email'] : ""
     );
     this.sc.setUser(newUser);
-    alert("Le formulaire est valide !");
+    alert("Le formulaire est valide sorcier bienvenue à Poudlard!");
     this.router.navigate(['/accueil']);
   }
 

@@ -25,21 +25,21 @@
 
   <mat-sidenav #sidenav fxHide.gt-sm=" true" fxLayout="column" mode="over" opened="false">
     <div fxLayout="column">
-      <a (click)="sidenav.toggle()" class="companyName" mat-button>
+      <button (click)="sidenav.toggle()" class="companyName" mat-button>
         <mat-icon>menu</mat-icon>
-      </a>
-      <a (click)="sidenav.toggle()" aria-label="Accueil" class="example-icon" mat-icon-button routerLink="accueil">
+      </button>
+      <button (click)="sidenav.toggle()" aria-label="Accueil" class="example-icon" mat-icon-button routerLink="accueil">
         <mat-icon>home</mat-icon>
         Accueil
-      </a>
+      </button>
       <a (click)="sidenav.toggle()" aria-label="Liste" class="example-icon" mat-icon-button routerLink="liste">
         <mat-icon>list</mat-icon>
         Liste
       </a>
-      <a (click)="sidenav.toggle()" aria-label="Groupe" class="example-icon" mat-icon-button routerLink="gestion">
+      <button (click)="sidenav.toggle()" aria-label="Groupe" class="example-icon" mat-icon-button routerLink="gestion">
         <mat-icon>group</mat-icon>
         Gestion
-      </a>
+      </button>
     </div>
   </mat-sidenav>
 </div>
