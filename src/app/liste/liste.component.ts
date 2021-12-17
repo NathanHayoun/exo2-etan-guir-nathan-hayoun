@@ -11,7 +11,7 @@ export class ListeComponent {
   private title = ["Harry Potter", "Sword Art Online", "Avengers", "Star Wars", "Passenger"];
   private images = ["harrypotter.jpg", "sao.jpg", "avengers.jpg", "starwars.jpg", "passenger.jpg"];
 
-  constructor() {
+ public constructor() {
     this.films = Array<Film>();
     for (let i = 0; i < this.title.length; i++) {
       this.films.push(new Film(this.title[i], this.images[i]));

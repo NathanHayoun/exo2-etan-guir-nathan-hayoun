@@ -10,10 +10,10 @@ import {User} from "../models/User";
 export class GestionComponent implements OnInit {
   public lastContact: User | undefined = this.sc.getUser();
 
-  constructor(private sc: ContactService) {
+  public constructor(private sc: ContactService) {
   }
 
-  ngOnInit(): void {
+ public ngOnInit(): void {
     this.sc.userUpdate.subscribe((user) => {
       this.lastContact = user
     })

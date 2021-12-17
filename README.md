@@ -1,27 +1,42 @@
-# EtanGuirNathanHayounExo2
+# Etan Guir Nathan Hayoun Exercice 2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.2.
+**
 
-## Development server
+****M1 Miage APP - Paris I Panthéon Sorbonne - Jean-Philippe Nondeleo****
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**
+## Description rapide 
+Site internet sur le thème d'Harry Potter. Ce site contient une nav bar ***adapté à l'utilisation mobile***, une page qui liste les films, un formulaire de contact ainsi que d'une page de gestion qui affiche les données du formulaire.
 
-## Code scaffolding
+## Description 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Component
 
-## Build
+|Component| Utilité |
+|--|--|
+| Acceuil | Affiche la page d'acceuil. (Page par défaut) |
+| Contact | Gère le formulaire de contact ainsi que sa validation|
+| Footer | Affiche le footer ainsi que le bouton contact | 
+| Gestion | Affiche les dernières données saisi dans le formulaire de contact. A défaut une erreur 404| 
+| Header | Affiche la barre de navigation (***rétractable sur mobile !***)|
+| liste | Affiche la liste des films |
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Modèles
 
-## Running unit tests
+| Modèle | Utilité |
+|--|--|
+| Film | Modèle utilisé pour générer la liste des films avec leurs affiche |
+| User | Modèle utilisé pour sauvegarder un formulaire remplis par l'utilisateur et l'afficher par la suite sur la page gestion | 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Services
 
-## Running end-to-end tests
+|Service| Utilité |
+|--|--|
+| Contact service | Utilisé pour sauvegarder les données du formulaire de contact et les transmettre à la page gestion |
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Etudiants
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+|  Nom| Prénom  |
+|--|--|
+| Guir | Etan |
+| Hayoun | Nathan

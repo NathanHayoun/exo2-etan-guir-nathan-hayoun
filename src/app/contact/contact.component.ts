@@ -12,20 +12,20 @@ import {Router} from "@angular/router";
 export class ContactComponent implements OnInit {
 
   public mailCheck: boolean = true;
-  userForm!: FormGroup;
+  public userForm!: FormGroup;
 
 
-  constructor(private sc: ContactService, private formBuilder: FormBuilder, private router: Router) {
+  public constructor(private sc: ContactService, private formBuilder: FormBuilder, private router: Router) {
 
 
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.initForm();
   }
 
 
-  initForm() {
+  private initForm() {
     this.userForm = this.formBuilder.group({
       _firstName: ['', Validators.required],
       _lastName: ['', Validators.required],
@@ -35,10 +35,7 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  public setDonnee() {
-  }
-
-  onSubmitForm() {
+  public onSubmitForm() {
     const formValue = this.userForm.value;
     const newUser = new User(
       formValue['_firstName'],
@@ -57,10 +54,9 @@ export class ContactComponent implements OnInit {
 
     if (this.mailCheck) {
       this.userForm.controls["_email"].setValidators(Validators.compose([Validators.email, Validators.required]))
-      this.userForm.controls["_email"].updateValueAndValidity();
     } else {
       this.userForm.controls["_email"].clearValidators();
-      this.userForm.controls["_email"].updateValueAndValidity();
     }
+    this.userForm.controls["_email"].updateValueAndValidity();
   }
 }

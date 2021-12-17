@@ -1,39 +1,38 @@
 export class Film {
   private BASE_PATH = "assets/images/";
+  private _isExpand;
+  private _img: string;
+  private _title: string;
 
-  constructor(title: string, img: string) {
+ public constructor(title: string, img: string) {
     this._title = title;
     this._img = this.BASE_PATH + img;
     this._isExpand = false;
   }
 
-  private _isExpand;
-
-  get isExpand() {
+  public get isExpand() {
     return this._isExpand;
   }
 
-  set isExpand(value) {
+  public set isExpand(value) {
     this._isExpand = value;
   }
 
-  private _img: string;
 
-  get img(): string {
+  public get img(): string {
     return this._img;
   }
 
-  set img(value: string) {
+  public set img(value: string) {
     this._img = this.BASE_PATH + value;
   }
 
-  private _title: string;
 
-  get title(): string {
+  public get title(): string {
     return this._title;
   }
 
-  set title(value: string) {
+  public set title(value: string) {
     this._title = value;
   }
 }

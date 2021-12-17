@@ -5,18 +5,22 @@ import {User} from "../models/User";
   providedIn: 'root'
 })
 export class ContactService {
-  userUpdate: EventEmitter<User> = new EventEmitter<User>();
+  private _userUpdate: EventEmitter<User> = new EventEmitter<User>();
   private user: User | undefined;
 
-  constructor() {
+  public constructor() {
   }
 
-  setUser(user: User) {
+ public setUser(user: User) {
     this.user = user;
-    this.userUpdate.emit(user);
+    this._userUpdate.emit(user);
   }
 
-  getUser() {
+ public getUser() {
     return this.user;
+  }
+
+ public get userUpdate(): EventEmitter<User> {
+    return this._userUpdate;
   }
 }

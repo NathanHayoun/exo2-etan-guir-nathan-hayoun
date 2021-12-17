@@ -5,7 +5,7 @@ import {Component, OnInit} from '@angular/core';
   templateUrl: './accueil.component.html',
   styleUrls: ['./accueil.component.scss']
 })
-export class AccueilComponent{
-  constructor() {
+export class AccueilComponent {
+  public constructor() {
   }
 }
