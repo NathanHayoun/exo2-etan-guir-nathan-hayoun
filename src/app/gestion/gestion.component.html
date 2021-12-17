@@ -1,11 +1,14 @@
-<div *ngIf="lastContact">
-  {{ lastContact.firstName }}
-  {{ lastContact.lastName }}
-  {{ lastContact.email }}
-  {{lastContact.age}}
-  {{lastContact.commentaire}}
-</div>
+<mat-card *ngIf="lastContact" class="fond">
+  <h1>Dernier sorcier inscrit</h1>
+  <ul>
+    <h2> Prenom : {{ lastContact.firstName }}</h2>
+    <h2> Nom : {{ lastContact.lastName }}</h2>
+    <h2 *ngIf=lastContact.email> Mail : {{ lastContact.email }}</h2>
+    <h2> Age : {{lastContact.age}}</h2>
+    <h2> Commentaire : {{lastContact.commentaire}}</h2>
+  </ul>
+</mat-card>
 
-<div *ngIf="!lastContact">
-  ERREUR 404
+<div *ngIf="!lastContact" class="wraper">
+  <img [src]="'assets/images/erroe404.PNG'" alt="error404">
 </div>

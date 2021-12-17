@@ -1,15 +1,23 @@
-.fond{
-  height: 50%;
-  background-color: black;
-  position: relative;
-
+.mat-form-field {
+  width: 100%;
+  text-align: center;
 }
 
-.mat-form-field{
-  position: relative;
+.card-contact {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70rem;
+  margin-bottom: 10rem;
+  box-shadow: 10px 5px 5px black;
+  background-color: #4D4444;
 }
 
-.mat-label{
-  width: 200rem;
+.header-card {
+  justify-content: center;
 }
 
+h1 {
+  font-family: harryPotter;
+
+}

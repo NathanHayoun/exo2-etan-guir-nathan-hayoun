@@ -29,7 +29,7 @@ export class ContactComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       _firstName: ['', Validators.required],
       _lastName: ['', Validators.required],
-      _age: ['', Validators.required],
+      _age: ['', Validators.compose([Validators.pattern("\\d+"), Validators.required])],
       _commentaire: ['', Validators.required],
       _email: ['', Validators.compose([Validators.email, Validators.required])]
     });
@@ -48,7 +48,7 @@ export class ContactComponent implements OnInit {
       formValue['_email'] ? formValue['_email'] : ""
     );
     this.sc.setUser(newUser);
-    alert("Le formulaire est valide !");
+    alert("Le formulaire est valide sorcier bienvenue à Poudlard!");
     this.router.navigate(['/accueil']);
   }
 

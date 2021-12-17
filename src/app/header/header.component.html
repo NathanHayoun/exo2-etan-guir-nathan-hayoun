@@ -1,15 +1,45 @@
-<mat-toolbar color="primary">
-  <span>Ex2 - Etan - Nathan</span>
-  <a aria-label="Acceuil" class="example-icon" mat-icon-button routerLink="accueil">
-    <mat-icon>home</mat-icon>
-    Accueil
-  </a>
-  <a aria-label="Liste" class="example-icon" mat-icon-button routerLink="liste">
-    <mat-icon>list</mat-icon>
-    Liste
-  </a>
-  <button aria-label="Groupe" class="example-icon" mat-icon-button routerLink="gestion">
-    <mat-icon>group</mat-icon>
-    Gestion
-  </button>
-</mat-toolbar>
+<div>
+  <mat-toolbar class="navbar">
+    <div fxHide.gt-sm="true" fxShow="true">
+      <button (click)="sidenav.toggle()" mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <span>Nathan and Etan</span>
+    <div class="box" fxHide.lt-md="true" fxShow="true">
+      <button aria-label="Accueil" class="icon-grand-navbar" mat-icon-button routerLink="accueil">
+        <mat-icon>home</mat-icon>
+        Accueil
+      </button>
+      <button aria-label="Liste" class="icon-grand-navbar" mat-icon-button routerLink="liste">
+        <mat-icon>list</mat-icon>
+        <span class="nav-caption"></span>
+        Liste
+      </button>
+      <button aria-label="Groupe" class="icon-grand-navbar" mat-icon-button routerLink="gestion">
+        <mat-icon>group</mat-icon>
+        Gestion
+      </button>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav #sidenav fxHide.gt-sm=" true" fxLayout="column" mode="over" opened="false">
+    <div fxLayout="column">
+      <button (click)="sidenav.toggle()" class="companyName" mat-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button (click)="sidenav.toggle()" aria-label="Accueil" class="example-icon" mat-icon-button routerLink="accueil">
+        <mat-icon>home</mat-icon>
+        Accueil
+      </button>
+      <a (click)="sidenav.toggle()" aria-label="Liste" class="example-icon" mat-icon-button routerLink="liste">
+        <mat-icon>list</mat-icon>
+        Liste
+      </a>
+      <button (click)="sidenav.toggle()" aria-label="Groupe" class="example-icon" mat-icon-button routerLink="gestion">
+        <mat-icon>group</mat-icon>
+        Gestion
+      </button>
+    </div>
+  </mat-sidenav>
+</div>
